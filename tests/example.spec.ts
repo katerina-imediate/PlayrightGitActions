@@ -1,4 +1,6 @@
 import { test, expect } from '@playwright/test';
+import { skip } from 'node:test';
+
 
 test('has title', async ({ page }) => {
   await page.goto('https://playwright.dev/');
