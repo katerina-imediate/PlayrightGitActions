@@ -3,7 +3,7 @@ import { devices, expect, test } from '@playwright/test';
 for (let i = 0; i < 10; ++i) {
   
   test ('chrome browser instances ' + i, {
-    tag: '@slow',
+    tag: '@fast',
   }, async ({ playwright, page, }) => {
     const browser = await playwright.chromium.launch();
     try {
