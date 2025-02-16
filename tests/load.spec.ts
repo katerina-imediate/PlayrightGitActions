@@ -1,5 +1,4 @@
 import { devices, expect, test } from '@playwright/test';
-const v8toIstanbul = require('v8-to-istanbul');
 
 
 for (let i = 0; i < 10; ++i) {
