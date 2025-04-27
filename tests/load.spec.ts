@@ -18,10 +18,13 @@ import { devices, expect, test } from '@playwright/test';
       await page.goto('https://playwright.dev/');
       await expect(page.getByRole('link', { name: 'Get started' })).toBeVisible();
 
+      await page.screenshot({ path: 'screenshot.png', fullPage: true });
+
       await page.routeWebSocket('wss://socketsbay.com/wss/v2/1/demo/', ws => {
         ws.onMessage(message => {
           if (message === 'request')
             ws.send('response');
+
         });
       });
 
